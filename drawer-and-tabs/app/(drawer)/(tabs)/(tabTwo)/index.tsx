@@ -1,14 +1,17 @@
-import { StyleSheet } from 'react-native';
+import { Button, StyleSheet } from 'react-native';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text, View } from '@/components/Themed';
+import { useRouter } from 'expo-router';
 
 export default function TabTwoScreen() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
+      <Text style={styles.title}>Tab Two, Screen Two, Hello</Text>
+      <Button
+        title="Go to /(tabs)/(tabTwo)/tabTwoScreenTwo"
+        onPress={() => router.push("/tabTwoScreenTwo")} />
     </View>
   );
 }
@@ -18,6 +21,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'lightgrey'
   },
   title: {
     fontSize: 20,

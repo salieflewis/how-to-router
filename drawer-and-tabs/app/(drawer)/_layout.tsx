@@ -25,6 +25,7 @@ export default function Layout() {
       }}
       screenOptions={{
         drawerType: "slide",
+        drawerPosition: "right",
         header: () => null,
       }}
     >
