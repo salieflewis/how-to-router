@@ -1,17 +1,18 @@
 import { Button, StyleSheet } from 'react-native';
 
 import { Text, View } from '@/components/Themed';
-import { useRouter } from 'expo-router';
+import { useRouter, useNavigation, Link } from 'expo-router';
+import { useEffect } from 'react';
 
-export default function TabTwoScreen() {
+export default function ProfileScreen() {
   const router = useRouter();
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab Two, Screen Two, Hello</Text>
-      <Button
-        title="Go to /(tabs)/(tabTwo)/tabTwoScreenTwo"
-        onPress={() => router.push("/tabTwoScreenTwo")} />
+      <Link href="/channel/">
+        <Text>Go to Channel</Text>
+      </Link>
     </View>
   );
 }

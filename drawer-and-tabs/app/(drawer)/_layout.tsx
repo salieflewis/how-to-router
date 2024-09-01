@@ -1,9 +1,21 @@
 import { Drawer } from "expo-router/drawer";
 import { StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useNavigation } from 'expo-router';
+import { useEffect } from 'react';
 
 export default function Layout() {
   const insets = useSafeAreaInsets();
+
+//   const navigation = useNavigation();
+// // const pathname = usePathname();
+
+// useEffect(() => {
+//   console.log(
+//     // .routes[0].state?.history
+//     JSON.stringify(navigation.getState(), null, 2)
+//   );
+// }, []);
 
   return (
     <Drawer
