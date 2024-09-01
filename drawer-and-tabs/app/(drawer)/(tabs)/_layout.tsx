@@ -44,7 +44,7 @@ export default function TabLayout() {
         }}
       />
        <Tabs.Screen
-        name="channel/index"
+        name="channel"
         options={{
           href: null,
           title: 'Channel',
